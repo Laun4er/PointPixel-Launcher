@@ -8,8 +8,6 @@ namespace PointPixel_Launcher
         public MainWindow()
         {
             InitializeComponent();
-            Class1 lib = new Class1();
-            lib.libVer(verlib);
         }
 
 

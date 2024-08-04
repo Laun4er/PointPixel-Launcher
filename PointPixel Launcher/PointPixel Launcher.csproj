@@ -10,9 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\PP.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="PP lib">
       <HintPath>..\..\PP lib\PP lib\bin\Debug\net8.0-windows\PP lib.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\PP.png" />
   </ItemGroup>
 
 </Project>

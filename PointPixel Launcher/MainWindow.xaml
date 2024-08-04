@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointPixel_Launcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" GlassFrameThickness="1"/>
+    </WindowChrome.WindowChrome>
     <Grid>
-        <TextBlock x:Name="verlib"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+
+
+
+        <Border Grid.RowSpan="3" Background="#2D2D2D" CornerRadius="10" Margin="10,10,4,10">
+            <Border Width="35" Height="35" Margin="0,5" Background="#444444" CornerRadius="5" VerticalAlignment="Top">
+                <Image Source="/Assets/PP.png" Margin="2"/>
+            </Border>
+        </Border>
+        <Border Grid.Column="1" Background="#3C3C3C" CornerRadius="10" Margin="4,10,10,4"/>
+        <Border Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="2" Background="#3C3C3C" CornerRadius="10" Margin="4,4,10,10"/>
+        
     </Grid>
 </Window>
