@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using PP_lib;
 
 namespace PointPixel_Launcher
 {
@@ -7,6 +8,10 @@ namespace PointPixel_Launcher
         public MainWindow()
         {
             InitializeComponent();
+            Class1 lib = new Class1();
+            lib.libVer(verlib);
         }
+
+
     }
 }
