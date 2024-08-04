@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointPixel Launcher", "PointPixel Launcher\PointPixel Launcher.csproj", "{CEBCE122-1B7C-47A3-8B2B-7E25C629156C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEBCE122-1B7C-47A3-8B2B-7E25C629156C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBCE122-1B7C-47A3-8B2B-7E25C629156C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBCE122-1B7C-47A3-8B2B-7E25C629156C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBCE122-1B7C-47A3-8B2B-7E25C629156C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11A8C6D4-4888-47DE-935D-B00F07ABC5C1}
+	EndGlobalSection
+EndGlobal
