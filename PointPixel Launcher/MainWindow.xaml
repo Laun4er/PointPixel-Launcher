@@ -5,12 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointPixel_Launcher"
         mc:Ignorable="d"
-        Title="Pixel Launcher" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
+        Title="PixelPoint Launcher" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
 
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" GlassFrameThickness="1"/>
     </WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Window.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"/>
             <ColumnDefinition Width="*"/>
@@ -21,13 +31,14 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-
-
-
-
+        
         <Border Grid.RowSpan="3" Background="#2D2D2D" CornerRadius="10" Margin="10,10,4,10">
             <Border Width="35" Height="35" Margin="0,5" Background="#444444" CornerRadius="5" VerticalAlignment="Top">
-                <Image Source="/Assets/PP.png" Margin="2"/>
+                <Image Source="/Assets/PP.png" Margin="2">
+                    <Image.ToolTip>
+                        <ToolTip Content="PointPixel"/>
+                    </Image.ToolTip>
+                </Image>
             </Border>
         </Border>
         <Border MouseLeftButtonDown="Border_MouseLeftButtonDown" MouseDown="Border_MouseDown" Grid.Column="1" Background="#3C3C3C" CornerRadius="10" Margin="4,10,10,4"/>
