@@ -11,6 +11,9 @@
 
   <ItemGroup>
     <None Remove="Assets\PP.png" />
+    <None Remove="Assets\Window\close.png" />
+    <None Remove="Assets\Window\maximize.png" />
+    <None Remove="Assets\Window\minimize.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +24,9 @@
 
   <ItemGroup>
     <Resource Include="Assets\PP.png" />
+    <Resource Include="Assets\Window\close.png" />
+    <Resource Include="Assets\Window\maximize.png" />
+    <Resource Include="Assets\Window\minimize.png" />
   </ItemGroup>
 
 </Project>

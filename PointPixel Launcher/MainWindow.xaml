@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointPixel_Launcher"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
+        Title="Pixel Launcher" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
 
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" GlassFrameThickness="1"/>
@@ -30,8 +30,14 @@
                 <Image Source="/Assets/PP.png" Margin="2"/>
             </Border>
         </Border>
-        <Border Grid.Column="1" Background="#3C3C3C" CornerRadius="10" Margin="4,10,10,4"/>
+        <Border MouseLeftButtonDown="Border_MouseLeftButtonDown" MouseDown="Border_MouseDown" Grid.Column="1" Background="#3C3C3C" CornerRadius="10" Margin="4,10,10,4"/>
         <Border Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="2" Background="#3C3C3C" CornerRadius="10" Margin="4,4,10,10"/>
-        
+
+        <DockPanel Grid.Column="1" Width="65" Height="15" VerticalAlignment="Top" Margin="5,11,10,4" HorizontalAlignment="Right">
+            <Image  x:Name="minimizeButton" MouseLeftButtonDown="minimizeButton_MouseLeftButtonDown" Source="/Assets/Window/minimize.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Bottom"/>
+            <Image  x:Name="maximizeBox" MouseLeftButtonDown="maximizeBox_MouseLeftButtonDown" Source="/Assets/Window/maximize.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Top"/>
+            <Image  x:Name="closeButton" MouseLeftButtonDown="closeButton_MouseLeftButtonDown" Source="/Assets/Window/close.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Top"/>
+        </DockPanel>
+
     </Grid>
 </Window>
