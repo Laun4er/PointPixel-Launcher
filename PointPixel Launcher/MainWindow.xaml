@@ -7,23 +7,28 @@
         mc:Ignorable="d"
         Title="PixelPoint Launcher" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
 
+
+
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" GlassFrameThickness="1"/>
     </WindowChrome.WindowChrome>
 
     <Window.Resources>
+        
+        
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles/Window.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    
-    <Grid>
 
+    <Grid x:Name="Win">
+<!--Разметка-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" x:Name="col1"/>
+            <ColumnDefinition Width="*" x:Name="col2"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -32,11 +37,11 @@
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         
-        <Border Grid.RowSpan="3" Background="#2D2D2D" CornerRadius="10" Margin="10,10,4,10">
+        <Border Grid.RowSpan="3" Background="#2D2D2D" CornerRadius="10" Margin="10,10,4,10" Width="35" x:Name="LeftNavPanel">
             <Border Width="35" Height="35" Margin="0,5" Background="#444444" CornerRadius="5" VerticalAlignment="Top">
                 <Image Source="/Assets/PP.png" Margin="2">
                     <Image.ToolTip>
-                        <ToolTip Content="PointPixel"/>
+                        <ToolTip Content="PointPixel.ru"/>
                     </Image.ToolTip>
                 </Image>
             </Border>
@@ -50,5 +55,14 @@
             <Image  x:Name="closeButton" MouseLeftButtonDown="closeButton_MouseLeftButtonDown" Source="/Assets/Window/close.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Top"/>
         </DockPanel>
 
+        <ListBox x:Name="Mainwin" Grid.Row="1" Width="35" Background="Transparent" Margin="10,0,4,0">
+            <ListBoxItem x:Name="Main" Margin="0,0,0,15">
+                <Image Source="/Assets/ListBox Static/Main.png" Width="30" Height="30" HorizontalAlignment="Left"/>
+            </ListBoxItem>
+            <ListBoxItem x:Name="Parametres">
+                <Image Source="/Assets/ListBox Static/Parametres.png" Width="30" Height="30"/>
+            </ListBoxItem>
+        </ListBox>
+        
     </Grid>
 </Window>

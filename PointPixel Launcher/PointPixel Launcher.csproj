@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\ListBox Static\Main.png" />
+    <None Remove="Assets\ListBox Static\Parametres.png" />
     <None Remove="Assets\PP.png" />
     <None Remove="Assets\Window\close.png" />
     <None Remove="Assets\Window\maximize.png" />
@@ -23,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\ListBox Static\Main.png" />
+    <Resource Include="Assets\ListBox Static\Parametres.png" />
     <Resource Include="Assets\PP.png" />
     <Resource Include="Assets\Window\close.png" />
     <Resource Include="Assets\Window\maximize.png" />
