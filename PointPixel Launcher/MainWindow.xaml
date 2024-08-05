@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointPixel_Launcher"
         mc:Ignorable="d"
-        Title="PixelPoint Launcher" MinHeight="600" MinWidth="1000" Background="#1E1E1E" WindowStartupLocation="CenterScreen" >
+        Title="PixelPoint Launcher" MinHeight="600" MinWidth="1000" Background="#2D2D2D" WindowStartupLocation="CenterScreen" >
 
 
 
@@ -19,50 +19,39 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Styles/Window.xaml"/>
+                <ResourceDictionary Source="/Styles/WinStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid x:Name="Win">
-<!--Разметка-->
+    <Grid>
+        <!--Разметка-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" x:Name="col1"/>
-            <ColumnDefinition Width="*" x:Name="col2"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        
-        <Border Grid.RowSpan="3" Background="#2D2D2D" CornerRadius="10" Margin="10,10,4,10" Width="35" x:Name="LeftNavPanel">
-            <Border Width="35" Height="35" Margin="0,5" Background="#444444" CornerRadius="5" VerticalAlignment="Top">
-                <Image Source="/Assets/PP.png" Margin="2">
-                    <Image.ToolTip>
-                        <ToolTip Content="PointPixel.ru"/>
-                    </Image.ToolTip>
-                </Image>
-            </Border>
+
+        <Border Background="#1E1E1E" Grid.Column="1" Grid.Row="1" CornerRadius="15,0,0,0">
+            <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden" Margin="10,10,0,0"/>
         </Border>
-        <Border MouseLeftButtonDown="Border_MouseLeftButtonDown" MouseDown="Border_MouseDown" Grid.Column="1" Background="#3C3C3C" CornerRadius="10" Margin="4,10,10,4"/>
-        <Border Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="2" Background="#3C3C3C" CornerRadius="10" Margin="4,4,10,10"/>
 
-        <DockPanel Grid.Column="1" Width="65" Height="15" VerticalAlignment="Top" Margin="5,11,10,4" HorizontalAlignment="Right">
-            <Image  x:Name="minimizeButton" MouseLeftButtonDown="minimizeButton_MouseLeftButtonDown" Source="/Assets/Window/minimize.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Bottom"/>
-            <Image  x:Name="maximizeBox" MouseLeftButtonDown="maximizeBox_MouseLeftButtonDown" Source="/Assets/Window/maximize.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Top"/>
-            <Image  x:Name="closeButton" MouseLeftButtonDown="closeButton_MouseLeftButtonDown" Source="/Assets/Window/close.png" Height="15" Width="15" Margin="0,0,6,0" RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Top"/>
-        </DockPanel>
+        <Image Source="/Assets/PP.png"/>
 
-        <ListBox x:Name="Mainwin" Grid.Row="1" Width="35" Background="Transparent" Margin="10,0,4,0">
-            <ListBoxItem x:Name="Main" Margin="0,0,0,15">
-                <Image Source="/Assets/ListBox Static/Main.png" Width="30" Height="30" HorizontalAlignment="Left"/>
-            </ListBoxItem>
-            <ListBoxItem x:Name="Parametres">
-                <Image Source="/Assets/ListBox Static/Parametres.png" Width="30" Height="30"/>
+        <ListBox Background="Transparent" Grid.Row="1" x:Name="ListBox1" SelectionChanged="PageChanged">
+            <ListBoxItem x:Name="Main">
+                <Image Source="/Assets/ListBox Static/Main.png" Width="60" Height="60"/>
             </ListBoxItem>
         </ListBox>
-        
+
+        <ListBox Background="Transparent" Grid.Row="1" x:Name="ListBox2" VerticalAlignment="Bottom" SelectionChanged="PageChanged">
+            <ListBoxItem x:Name="Parametres">
+                <Image Source="/Assets/ListBox Static/Settings.png" Width="50" Height="50"/>
+            </ListBoxItem>
+        </ListBox>
     </Grid>
 </Window>

@@ -32,19 +32,19 @@
     </Style>
 
     
-    <Style TargetType="{x:Type ListBoxItem}">
+    <Style TargetType="{x:Type ListBoxItem}"> <!--Анимация листбокса-->
     <Setter Property="Template">
         <Setter.Value>
             <ControlTemplate TargetType="{x:Type ListBoxItem}">
                 <Grid x:Name="grid" Background="Transparent" Cursor="Hand">
-                    <Border x:Name="overlay" Background="#363840" HorizontalAlignment="Left" Width="0"/>
+                    <Border x:Name="overlay" Background="Gray" HorizontalAlignment="Center" Width="55" Height="55" Opacity="0" CornerRadius="5"/>
                     <Border x:Name="border" Background="Transparent" Padding="0">
                         <ContentPresenter/>
                     </Border>
                 </Grid>
                 <ControlTemplate.Resources>
                     <Storyboard x:Key="EaseOut" FillBehavior="Stop">
-                        <DoubleAnimation Storyboard.TargetName="overlay" Storyboard.TargetProperty="Width" To="0" Duration="0:0:0.2">
+                        <DoubleAnimation Storyboard.TargetName="overlay" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2">
                             <DoubleAnimation.EasingFunction>
                                 <CubicEase EasingMode="EaseIn"/>
                             </DoubleAnimation.EasingFunction>
@@ -60,7 +60,7 @@
                         <MultiTrigger.EnterActions>
                             <BeginStoryboard x:Name="EnterBegin">
                                 <Storyboard>
-                                    <DoubleAnimation Storyboard.TargetName="overlay" Storyboard.TargetProperty="Width" To="10" Duration="0:0:0.2">
+                                    <DoubleAnimation Storyboard.TargetName="overlay" Storyboard.TargetProperty="Opacity" To="0.5" Duration="0:0:0.2">
                                         <DoubleAnimation.EasingFunction>
                                             <CubicEase EasingMode="EaseOut"/>
                                         </DoubleAnimation.EasingFunction>
@@ -76,7 +76,7 @@
                         <Trigger.EnterActions>
                             <BeginStoryboard x:Name="Selection">
                                 <Storyboard>
-                                    <DoubleAnimation Storyboard.TargetName="overlay" Storyboard.TargetProperty="Width" To="205" Duration="0:0:0.2">
+                                    <DoubleAnimation Storyboard.TargetName="overlay" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2">
                                         <DoubleAnimation.EasingFunction>
                                             <CubicEase EasingMode="EaseOut"/>
                                         </DoubleAnimation.EasingFunction>
@@ -99,7 +99,7 @@
     </Setter>
 </Style>
 
-<Style TargetType="{x:Type ListBox}">
+<Style TargetType="{x:Type ListBox}"> <!---->
     <Setter Property="Template">
         <Setter.Value>
             <ControlTemplate TargetType="{x:Type ListBox}">

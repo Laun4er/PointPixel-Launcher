@@ -11,11 +11,23 @@
 
   <ItemGroup>
     <None Remove="Assets\ListBox Static\Main.png" />
-    <None Remove="Assets\ListBox Static\Parametres.png" />
+    <None Remove="Assets\ListBox Static\Mods.png" />
+    <None Remove="Assets\ListBox Static\News.png" />
+    <None Remove="Assets\ListBox Static\Profile.png" />
+    <None Remove="Assets\ListBox Static\Settings.png" />
     <None Remove="Assets\PP.png" />
+    <None Remove="Assets\Toggles\ToggleOFF.png" />
+    <None Remove="Assets\Toggles\ToggleON.png" />
     <None Remove="Assets\Window\close.png" />
+    <None Remove="Assets\Window\close_hover.png" />
     <None Remove="Assets\Window\maximize.png" />
+    <None Remove="Assets\Window\maximize_hover.png" />
     <None Remove="Assets\Window\minimize.png" />
+    <None Remove="Assets\Window\minimize_hover.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="XamlAnimatedGif" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,11 +38,19 @@
 
   <ItemGroup>
     <Resource Include="Assets\ListBox Static\Main.png" />
-    <Resource Include="Assets\ListBox Static\Parametres.png" />
+    <Resource Include="Assets\ListBox Static\Mods.png" />
+    <Resource Include="Assets\ListBox Static\News.png" />
+    <Resource Include="Assets\ListBox Static\Profile.png" />
+    <Resource Include="Assets\ListBox Static\Settings.png" />
     <Resource Include="Assets\PP.png" />
+    <Resource Include="Assets\Toggles\ToggleOFF.png" />
+    <Resource Include="Assets\Toggles\ToggleON.png" />
     <Resource Include="Assets\Window\close.png" />
+    <Resource Include="Assets\Window\close_hover.png" />
     <Resource Include="Assets\Window\maximize.png" />
+    <Resource Include="Assets\Window\maximize_hover.png" />
     <Resource Include="Assets\Window\minimize.png" />
+    <Resource Include="Assets\Window\minimize_hover.png" />
   </ItemGroup>
 
 </Project>
