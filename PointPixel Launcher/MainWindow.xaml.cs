@@ -23,8 +23,6 @@ namespace PointPixel_Launcher
             ListBox1.SelectedIndex = 0;
     }
 
-        
-
         private void Border_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             DragMove();
@@ -79,7 +77,7 @@ namespace PointPixel_Launcher
                         yield return (T)child;
                     }
 
-                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    foreach (T childOfChild in FindVisualChildren<T>(depObj: child))
                     {
                         yield return childOfChild;
                     }

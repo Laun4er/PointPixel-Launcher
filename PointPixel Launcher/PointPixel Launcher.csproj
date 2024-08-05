@@ -21,9 +21,7 @@
     <None Remove="Assets\Window\close.png" />
     <None Remove="Assets\Window\close_hover.png" />
     <None Remove="Assets\Window\maximize.png" />
-    <None Remove="Assets\Window\maximize_hover.png" />
     <None Remove="Assets\Window\minimize.png" />
-    <None Remove="Assets\Window\minimize_hover.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,9 +46,7 @@
     <Resource Include="Assets\Window\close.png" />
     <Resource Include="Assets\Window\close_hover.png" />
     <Resource Include="Assets\Window\maximize.png" />
-    <Resource Include="Assets\Window\maximize_hover.png" />
     <Resource Include="Assets\Window\minimize.png" />
-    <Resource Include="Assets\Window\minimize_hover.png" />
   </ItemGroup>
 
 </Project>
