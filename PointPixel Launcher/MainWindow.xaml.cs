@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 
 namespace PointPixel_Launcher
 {
@@ -42,7 +44,7 @@ namespace PointPixel_Launcher
                         yield return (T)child;
                     }
 
-                    foreach (T childOfChild in FindVisualChildren<T>(depObj: child))
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
                     {
                         yield return childOfChild;
                     }
@@ -77,6 +79,17 @@ namespace PointPixel_Launcher
                     foreach (var tabControl in FindVisualChildren<TabControl>(pageInstance))
                     {
                         tabControl.SelectedIndex = 0;
+                    }
+
+                    if(pageInstance.Title != null)
+                    {
+                        var animZ = FindResource("ChangeTitlePageZ") as Storyboard;
+                        var animO = FindResource("ChangeTitlePageO") as Storyboard;
+                        
+                        animZ.Begin(TitlePage);
+                        animO.Begin(TitlePage);
+                        TitlePage.Text = pageInstance.Title;
+
                     }
                 }
             }

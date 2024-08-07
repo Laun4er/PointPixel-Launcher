@@ -15,10 +15,8 @@
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" GlassFrameThickness="1"/>
     </WindowChrome.WindowChrome>
-
     <Window.Resources>
-        
-        
+
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -43,7 +41,7 @@
             <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden" Margin="10,10,0,0"/>
         </Border>
 
-        <TextBlock x:Name="TitlePage" Text="Тест" Grid.Column="1" Foreground="White" FontSize="20" VerticalAlignment="Center" Margin="15,0,0,0"/>
+        <TextBlock x:Name="TitlePage" Text="Главная" Grid.Column="1" Foreground="White" FontSize="20" VerticalAlignment="Center" Margin="15,0,0,0"/>
 
         <Grid MouseLeftButtonDown="Border_MouseLeftButtonDown" MouseDown="Border_MouseDown" Grid.Column="1" Background="Transparent"/>
 
