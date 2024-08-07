@@ -63,4 +63,8 @@
     <Resource Include="Assets\Window\minimize.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Assets\PlayButton\" />
+  </ItemGroup>
+
 </Project>
