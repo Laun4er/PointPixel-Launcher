@@ -15,6 +15,7 @@ namespace PointPixel_Launcher
             pages.Add("Main", new Main());
             pages.Add("News", new News());
             pages.Add("Mods", new Mods());
+            pages.Add("Wiki", new WIki());
             pages.Add("Profile", new Profile());
             pages.Add("Parametres", new Parametres());
 
@@ -28,43 +29,7 @@ namespace PointPixel_Launcher
             DragMove();
         }
 
-        private void minimizeButton_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
-
-        private void maximizeBox_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            switch (this.WindowState)
-            {
-                case WindowState.Maximized:
-                    this.WindowState = WindowState.Normal;
-                    break;
-                case WindowState.Normal:
-                    this.WindowState = WindowState.Maximized;
-                    break;
-            }
-        }
-
-        private void closeButton_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            this.Close();
-        }
-        private void Border_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            if (e.ClickCount == 2)
-            {
-                switch (this.WindowState)
-                {
-                    case WindowState.Maximized:
-                        this.WindowState = WindowState.Normal;
-                        break;
-                    case WindowState.Normal:
-                        this.WindowState = WindowState.Maximized;
-                        break;
-                }
-            }
-        }
+        
         private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
             if (depObj != null)
@@ -115,6 +80,43 @@ namespace PointPixel_Launcher
                     }
                 }
             }
+        }
+
+        private void minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void maximize_Click(object sender, RoutedEventArgs e)
+        {
+            switch (this.WindowState)
+            {
+                case WindowState.Maximized:
+                    this.WindowState = WindowState.Normal;
+                    break;
+                case WindowState.Normal:
+                    this.WindowState = WindowState.Maximized;
+                    break;
+            }
+        }
+        private void Border_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                switch (this.WindowState)
+                {
+                    case WindowState.Maximized:
+                        this.WindowState = WindowState.Normal;
+                        break;
+                    case WindowState.Normal:
+                        this.WindowState = WindowState.Maximized;
+                        break;
+                }
+            }
+        }
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

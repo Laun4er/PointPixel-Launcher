@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="Page">
+        <Setter Property="Background" Value="#2D2D2D"/>
+    </Style>
+    
+    
+    
+</ResourceDictionary>

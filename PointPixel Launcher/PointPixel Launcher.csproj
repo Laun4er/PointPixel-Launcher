@@ -10,11 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\ListBox Static\Main.png" />
-    <None Remove="Assets\ListBox Static\Mods.png" />
-    <None Remove="Assets\ListBox Static\News.png" />
-    <None Remove="Assets\ListBox Static\Profile.png" />
-    <None Remove="Assets\ListBox Static\Settings.png" />
+    <None Remove="Assets\ListBox Static\Hover\Main.png" />
+    <None Remove="Assets\ListBox Static\Hover\Mods.png" />
+    <None Remove="Assets\ListBox Static\Hover\News.png" />
+    <None Remove="Assets\ListBox Static\Hover\Profile.png" />
+    <None Remove="Assets\ListBox Static\Hover\Settings.png" />
+    <None Remove="Assets\ListBox Static\Hover\Wiki.png" />
+    <None Remove="Assets\ListBox Static\Static\Main.png" />
+    <None Remove="Assets\ListBox Static\Static\Mods.png" />
+    <None Remove="Assets\ListBox Static\Static\News.png" />
+    <None Remove="Assets\ListBox Static\Static\Profile.png" />
+    <None Remove="Assets\ListBox Static\Static\Settings.png" />
+    <None Remove="Assets\ListBox Static\Static\Wiki.png" />
     <None Remove="Assets\PP.png" />
     <None Remove="Assets\Toggles\ToggleOFF.png" />
     <None Remove="Assets\Toggles\ToggleON.png" />
@@ -35,11 +42,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\ListBox Static\Main.png" />
-    <Resource Include="Assets\ListBox Static\Mods.png" />
-    <Resource Include="Assets\ListBox Static\News.png" />
-    <Resource Include="Assets\ListBox Static\Profile.png" />
-    <Resource Include="Assets\ListBox Static\Settings.png" />
+    <Resource Include="Assets\ListBox Static\Hover\Main.png" />
+    <Resource Include="Assets\ListBox Static\Hover\Mods.png" />
+    <Resource Include="Assets\ListBox Static\Hover\News.png" />
+    <Resource Include="Assets\ListBox Static\Hover\Profile.png" />
+    <Resource Include="Assets\ListBox Static\Hover\Settings.png" />
+    <Resource Include="Assets\ListBox Static\Hover\Wiki.png" />
+    <Resource Include="Assets\ListBox Static\Static\Main.png" />
+    <Resource Include="Assets\ListBox Static\Static\Mods.png" />
+    <Resource Include="Assets\ListBox Static\Static\News.png" />
+    <Resource Include="Assets\ListBox Static\Static\Profile.png" />
+    <Resource Include="Assets\ListBox Static\Static\Settings.png" />
+    <Resource Include="Assets\ListBox Static\Static\Wiki.png" />
     <Resource Include="Assets\PP.png" />
     <Resource Include="Assets\Toggles\ToggleOFF.png" />
     <Resource Include="Assets\Toggles\ToggleON.png" />
