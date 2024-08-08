@@ -8,7 +8,28 @@
       d:DesignHeight="570" d:DesignWidth="950"
       Title="Главная">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/PagStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
     <Border CornerRadius="15,0,0,0" Background="Black">
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="2" Background="#444444" >
+                <Button Height="50" Width="280" Margin="0,-48,0,0" UseLayoutRounding="True" Padding="0" 
+                        Background="{x:Null}" SnapsToDevicePixels="True" BorderThickness="0" 
+                        Foreground="Transparent" Style="{x:Null}">
+                    <Image Source="/Assets/PlayButton/Setup.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                </Button>
+            </Border>
+        </Grid>
     </Border>
 </Page>
